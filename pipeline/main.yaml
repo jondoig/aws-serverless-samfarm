@@ -6,8 +6,8 @@ Parameters:
     Description: Name of the application.
     MinLength: "1"
     MaxLength: "20"
-    AllowedPattern: "[a-z0-9-]+"
-    ConstraintDescription: Malformed input parameter. AppName must only contain lower case letters, numbers, and -. Max length 20.
+    AllowedPattern: "[a-z][a-z0-9-]+[a-z0-9]"
+    ConstraintDescription: Malformed input parameter. AppName must start with a lower case letter and only contain lower case letters, numbers, and -. Max length 20.
   SAMInputFile:
     Type: String
     Description: The filename for the SAM file.
