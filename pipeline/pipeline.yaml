@@ -80,8 +80,7 @@ Resources:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     Properties:
-      # BucketName: !Sub "serverless-app-${AWS::AccountId}-${AWS::Region}-${AppName}"
-      BucketName: !Sub "serverless-app-748043903491-us-east-1-${AppName}"
+      BucketName: !Sub "serverless-app-${AWS::AccountId}-${AWS::Region}-${AppName}"
       VersioningConfiguration:
         Status: Enabled
   S3ArtifactBucketPolicy:
