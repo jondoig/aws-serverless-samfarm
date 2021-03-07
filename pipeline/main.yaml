@@ -5,9 +5,9 @@ Parameters:
     Type: String
     Description: Name of the application.
     MinLength: "1"
-    MaxLength: "80"
-    AllowedPattern: "[A-Za-z0-9-]+"
-    ConstraintDescription: Malformed input parameter. AppName must only contain upper and lower case letters, numbers, and -.
+    MaxLength: "20"
+    AllowedPattern: "[a-z0-9-]+"
+    ConstraintDescription: Malformed input parameter. AppName must only contain lower case letters, numbers, and -. Max length 20.
   SAMInputFile:
     Type: String
     Description: The filename for the SAM file.
@@ -45,7 +45,7 @@ Resources:
       Parameters:
         AppName: !Ref AppName
       # TemplateURL: "https://awscomputeblogimages.s3-us-west-2.amazonaws.com/samfarm-pipeline-roles.yaml"
-      TemplateURL: "https://raw.githubusercontent.com/jondoig/aws-serverless-samfarm/master/pipeline/pipeline-roles.yaml"
+      TemplateURL: "https://myteststack-serverless-api.s3.amazonaws.com/pipeline-roles.yaml"
   ServerlessPipeline:
     Type: "AWS::CloudFormation::Stack"
     DependsOn: [ServerlessRoles]
@@ -63,5 +63,5 @@ Resources:
         CodePipelineRole: !GetAtt ServerlessRoles.Outputs.CodePipelineRole
         CloudformationRole: !GetAtt ServerlessRoles.Outputs.CloudformationDeployRole
         CodeBuildRole: !GetAtt ServerlessRoles.Outputs.CodeBuildRole
-      TemplateURL: "http://myteststack-serverless-api.s3-website-us-east-1.amazonaws.com/pipeline.yaml"
+      TemplateURL: "https://myteststack-serverless-api.s3.amazonaws.com/pipeline.yaml"
       # TemplateURL: "https://awscomputeblogimages.s3-us-west-2.amazonaws.com/samfarm-pipeline.yaml"
