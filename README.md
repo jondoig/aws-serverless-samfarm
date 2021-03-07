@@ -104,7 +104,7 @@ to the url for the S3 static site we created. Something like:
 
 
 #### Lambda Function
-Go to index.js file the repo you made in Step 2 and update the line:
+Go to the index.js file in the repo you made in Step 2 and update the line:
 
 ```javascript
 var samCount = 1;
@@ -118,4 +118,4 @@ var samCount = 15;
 
 Commit and push the changes. 
 
-Go back to the pipeline we generated in Step 3, you will see AWS CodePipeline automatically pick up your change, and start the build and deploy process. Voila! A completely version controlled, serverless, CI/CD solution to give a squirrel a few friends. Technology!
+Go back to the pipeline we generated in Step 3, you will see AWS CodePipeline automatically pick up your change, and start the build and deploy process. Voilà! A completely version-controlled, serverless, CI/CD solution to give a squirrel a few friends. Technology!
