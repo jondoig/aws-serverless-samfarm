@@ -65,7 +65,7 @@ To create the pipeline stack, click the launch stack button below.
 
 ## Step 4
 ### Update your website
-If you have looked at the code in the website (or if you haven't, now is your chance!), you may have noticed that the website makes http requests to an api periodically to update the number of SAMs on the screen. Right now it is pointing at nothing, so lets update it to point it to brand spanking new API. In the [app.js](website/app.js), look for the line
+If you have looked at the code in the website (or if you haven't, now is your chance!), you may have noticed that the website makes http requests to an api periodically to update the number of SAMs on the screen. Right now it is pointing at nothing, so let's update it to point it to your brand spanking new API. In the [app.js](website/app.js), look for the line
 
 ```javascript
 var GET_SAM_COUNT_URL = 'INSERT API GATEWAY URL HERE';
