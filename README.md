@@ -2,7 +2,7 @@
 This repo contains the full code and templates needed to create a the Serverless SamFarm demo as shown in the What's New with AWS Lambda presentation at Re:Invent 2016.
 
 There are three separate parts to this application: the api, the pipeline which detects, builds, and deploys changes, and the website. 
-Lets start by getting that website up and running.
+Let's start by getting that website up and running.
 
 ## Step 1
 
@@ -20,7 +20,7 @@ To create the website stack.
 
 Once the stack is complete, we will need to keep track of the S3 bucket name and the URL for the website. 
 
-Now we have all the seperate parts of our website, but lets get SAM up and running:
+Now we have all the seperate parts of our website, but let's get SAM up and running:
 
 ```bash
 sh upload_website.sh <s3-bucket-name>
@@ -77,7 +77,7 @@ and update that to your API Gateway endpoint. It should be in the format:
 https://<api-id>.execute-api.us-east-1.amazonaws.com/Prod/sam
 ```
 
-Now lets update your S3 static website with this change:
+Now let's update your S3 static website with this change:
 
 ```bash
 sh upload_website.sh <s3-bucket-name>
@@ -86,7 +86,7 @@ sh upload_website.sh <s3-bucket-name>
 
 ## Step 5
 ### Start the party (or how I learned to stop worrying and push a change)
-Now that we have our website, our code repository with our lambda function and our pipeline configured, lets see it in action. We are going to make two changes to our repository, first were going to setup our API for CORS, and second were going to update our Lambda function. Both changes will be made in the repo you created in Step 2.
+Now that we have our website, our code repository with our lambda function and our pipeline configured, let's see it in action. We are going to make two changes to our repository, first were going to setup our API for CORS, and second were going to update our Lambda function. Both changes will be made in the repo you created in Step 2.
 
 
 #### CORS
