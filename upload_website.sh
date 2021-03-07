@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function usage {
+usage() {
      echo """
      This script is to upload the website components of the AWS Serverless Samfarm demo to the s3 bucket created to host
      the website. To use, pass the s3 bucket name after the script name.
@@ -16,8 +16,8 @@ S3_BUCKET=''
 
  # Get the table name
  if [ $# -eq 0 ]; then
-     usage;
-     exit;
+     usage
+     exit
  else
      S3_BUCKET="$1"
  fi
